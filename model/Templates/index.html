@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  
+  <h2>Predict if the wine is the high quality wine based on its component</h2>
+  
+  <form method="POST" action="/">
+    fixed acidity:<br>
+    <input type="number" name="fixed_acidity" value=6.8>
+    <br><br>
+	volatile acidity:<br>
+    <input type="number" name="volatile_acidity" value=0.26>
+    <br><br>
+	citric acid:<br>
+    <input type="number" name="citric_acid" value=0.32>
+    <br><br>
+	residual sugar:<br>
+    <input type="number" name="residual_sugar" value=5.2>
+    <br><br>
+	chlorides:<br>
+    <input type="number" name="chlorides" value=0.043>
+    <br><br>
+	free sulfur dioxide:<br>
+    <input type="number" name="free_sulfur_dioxide" value=34>
+    <br><br>
+	total sulfur dioxide:<br>
+    <input type="number" name="total_sulfur_dioxide" value=134>
+    <br><br>
+	density:<br>
+    <input type="number" name="density" value=0.9937>
+    <br><br>
+	pH:<br>
+    <input type="number" name="pH" value=3.18>
+    <br><br>
+	sulphates:<br>
+    <input type="number" name="sulphates" value=0.47>
+    <br><br>
+	alcohol:<br>
+    <input type="number" name="alcohol" value=10.4>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if pred %}
+  <p>The death probability in five years is {{ pred }}</p>
+  {% endif %}
+
+  </body>
+</html>
